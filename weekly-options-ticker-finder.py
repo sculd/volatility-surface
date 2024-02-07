@@ -57,5 +57,5 @@ for ticker in tickers:
         
 complete_valid_tickers = pd.DataFrame({"tickers": valid_tickers})
 
-engine = sqlalchemy.create_engine('mysql+mysqlconnector://username:password@database-host-name:3306/database-name')
+engine = sqlalchemy.create_engine('mysql+mysqlconnector://username:password@localhost:3306/finance')
 complete_valid_tickers.to_sql("weekly_option_tickers", con=engine, if_exists="replace")
